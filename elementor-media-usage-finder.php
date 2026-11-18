@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Elementor Media Usage Finder
  * Description: Find pages and templates that reference an image in saved Elementor content.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 6.8
  * Requires PHP: 7.4
  * Author: Saif Ur Rehman
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EMUF_VERSION', '1.0.0' );
+define( 'EMUF_VERSION', '1.0.1' );
 define( 'EMUF_FILE', __FILE__ );
 define( 'EMUF_DIR', plugin_dir_path( __FILE__ ) );
 
