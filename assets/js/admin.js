@@ -11,9 +11,11 @@
 	let run = 0;
 	let request = null;
 	let matches = 0;
+	let scanning = false;
 
 	function status(message) { el.status.textContent = message; }
 	function busy(value) {
+		scanning = value;
 		el.scan.disabled = value || !attachmentId;
 		el.choose.disabled = value;
 		el.cancel.hidden = !value;
@@ -103,6 +105,7 @@
 		scanPage(1, run, 0);
 	});
 	el.cancel.addEventListener('click', function () {
+		if (!scanning) return;
 		++run;
 		if (request) request.abort();
 		busy(false);
