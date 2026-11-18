@@ -1,5 +1,7 @@
 # Elementor Media Usage Finder
 
+Current version: **1.0.1**. This patch hides Cancel once a scan finishes and refreshes the admin assets after updating.
+
 Select a Media Library image and find pages and templates that reference its attachment ID in saved Elementor content. The scanner reads up to 50 Elementor documents per request. It does not write to the database, delete files, or run on the frontend.
 
 ## Install and use
