@@ -1,4 +1,5 @@
 .emuf { max-width: 1080px; color: #1d2327; }
+.emuf [hidden] { display: none !important; }
 .emuf * { box-sizing: border-box; }
 .emuf__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin: 28px 0 24px; }
 .emuf__head h1 { font-size: 28px; font-weight: 650; line-height: 1.25; margin: 4px 0 8px; }
