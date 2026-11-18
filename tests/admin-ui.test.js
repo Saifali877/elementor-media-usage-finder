@@ -30,5 +30,8 @@ setImmediate(() => {
 	assert.match(elements['emuf-status'].textContent, /20 checked/);
 	assert.equal(elements['emuf-results'].hidden, false);
 	assert.equal(elements['emuf-scan'].disabled, false);
+	assert.equal(elements['emuf-cancel'].hidden, true);
+	elements['emuf-cancel'].click();
+	assert.match(elements['emuf-status'].textContent, /20 checked/);
 	console.log('Admin scan result UI passed.');
 });
