@@ -84,7 +84,7 @@ final class EMUF_Admin {
 				<div id="emuf-empty" class="emuf__empty"><?php esc_html_e( 'Results will appear here after the scan.', 'elementor-media-usage-finder' ); ?></div>
 				<div id="emuf-results" class="emuf__table-wrap" hidden><table class="widefat striped"><thead><tr><th><?php esc_html_e( 'Page or template', 'elementor-media-usage-finder' ); ?></th><th><?php esc_html_e( 'Type', 'elementor-media-usage-finder' ); ?></th><th><?php esc_html_e( 'Status', 'elementor-media-usage-finder' ); ?></th><th><?php esc_html_e( 'References', 'elementor-media-usage-finder' ); ?></th></tr></thead><tbody id="emuf-rows"></tbody></table></div>
 			</section>
-			<p class="emuf__footnote"><?php esc_html_e( 'Scope: saved Elementor attachment references. Dynamic ACF fields, CSS, shortcodes, theme files and other plugin data are outside v1.0. A blank result does not mean an image is safe to delete.', 'elementor-media-usage-finder' ); ?></p>
+			<p class="emuf__footnote"><?php esc_html_e( 'Scope: saved Elementor attachment references in document content and page settings. Dynamic ACF fields, CSS, shortcodes, theme files and other plugin data are outside this scan. A blank result does not mean an image is safe to delete.', 'elementor-media-usage-finder' ); ?></p>
 		</div>
 		<?php
 	}
