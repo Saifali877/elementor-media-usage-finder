@@ -1,6 +1,8 @@
 # Elementor Media Usage Finder
 
-Current version: **1.0.1**. This patch hides Cancel once a scan finishes and refreshes the admin assets after updating.
+By [DevPulse360](https://devpulse360.com/).
+
+Current version: **1.1.0**. The scan now includes documents with Elementor page settings even when they have no saved `_elementor_data` layout.
 
 Select a Media Library image and find pages and templates that reference its attachment ID in saved Elementor content. The scanner reads up to 50 Elementor documents per request. It does not write to the database, delete files, or run on the frontend.
 
@@ -11,9 +13,9 @@ Select a Media Library image and find pages and templates that reference its att
 3. Open **Tools → Elementor Media Finder**, choose an image, and click **Find usage**. Media Library list view also has a **Find Elementor usage** row action.
 4. Open a matching page or template from the results. You can cancel a long scan.
 
-The screen is limited to administrators with `manage_options`. It searches posts, pages, custom post types with an admin screen, and Elementor templates with saved `_elementor_data`. Draft, pending, private and scheduled items are included. The result gives the page/template, status and number of saved attachment objects.
+The screen is limited to administrators with `manage_options`. It searches posts, pages, custom post types with an admin screen, and Elementor templates with saved `_elementor_data` or `_elementor_page_settings`. Draft, pending, private and scheduled items are included. The result gives the page/template, status and number of saved attachment objects.
 
-## What v1.0 checks
+## What v1.1 checks
 
 Elementor stores its document layout in JSON post meta. The scanner matches image objects with both an attachment `id` and a `url`, including those nested in image widgets, galleries, container backgrounds and page settings. Saved pages may still be found if Elementor is inactive, but its template post type must be registered for templates to be included.
 
@@ -23,7 +25,7 @@ It does not follow dynamic ACF fields, Elementor template placement rules, CSS U
 
 - Requires WordPress 6.8+ and PHP 7.4+. JavaScript and CSS load only on this plugin's admin page.
 - No Elementor Pro or ACF dependency. It uses WordPress APIs to read saved Elementor data and does not change Elementor's editor or frontend.
-- PHP parser and JavaScript syntax checks were run during development. PHP lint and reference matching tests are configured in GitHub Actions for PHP 7.4, 8.3, 8.4 and 8.5.
+- PHP lint and reference matching tests are configured in GitHub Actions for PHP 7.4, 8.3, 8.4 and 8.5. The admin JavaScript test runs in Node.js.
 - WordPress 7.1.5 and specific plugin combinations still need real site testing. Compatibility with every plugin cannot be guaranteed.
 
 ## Test checklist
