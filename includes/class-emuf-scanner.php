@@ -26,7 +26,9 @@ final class EMUF_Scanner {
 				'update_post_meta_cache' => false,
 				'update_post_term_cache' => false,
 				'meta_query'            => array(
+					'relation' => 'OR',
 					array( 'key' => '_elementor_data', 'compare' => 'EXISTS' ),
+					array( 'key' => '_elementor_page_settings', 'compare' => 'EXISTS' ),
 				),
 			)
 		);
