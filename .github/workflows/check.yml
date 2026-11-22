@@ -16,5 +16,6 @@ jobs:
           coverage: none
       - run: find . -name '*.php' -print0 | xargs -0 -n1 php -l
       - run: php tests/reference-count.php
+      - run: php tests/page-settings-scan.php
       - run: node --check assets/js/admin.js
       - run: node tests/admin-ui.test.js
