@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Elementor Media Usage Finder
  * Plugin URI: https://devpulse360.com/
- * Description: Find pages and templates that reference an image in saved Elementor content.
+ * Description: Find saved Elementor and ACF image references across posts, pages and templates.
  * Version: 1.2.0
  * Requires at least: 6.8
  * Requires PHP: 7.4
